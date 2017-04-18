@@ -69,7 +69,8 @@ final class RecipesDatasource: NSObject, RecipesCollectionDatasource {
   func recipeCellAt(_ indexPath: IndexPath) -> RecipeCell {
     let cell = self.collectionView!.dequeueReusableCell(for: indexPath, cellType: RecipeCell.self)
     let recipe = self.recipes[indexPath.row]
-    cell.setup(recipe: recipe)
+    let imageUrl = recipe.photo?.url
+    cell.setup(name: recipe.name, imageUrl: imageUrl ?? "")
     return cell
   }
 }

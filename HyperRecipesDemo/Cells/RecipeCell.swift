@@ -35,8 +35,8 @@ class RecipeCell: UICollectionViewCell, NibReusable {
     return CGSize(width: width, height: height)
   }
   
-  func setup(recipe: Recipe) {
-    titleLabel.text = recipe.name
-    recipeImage.download(image: recipe.photo?.url ?? "")
+  func setup(name: String, imageUrl: String) {
+    titleLabel.text = name
+    recipeImage.download(image: imageUrl)
   }
 }

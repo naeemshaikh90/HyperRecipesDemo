@@ -20,7 +20,6 @@
  * THE SOFTWARE.
  */
 
-
 import Quick
 import Nimble
 @testable import HyperRecipesDemo
